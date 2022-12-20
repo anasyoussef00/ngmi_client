@@ -3,7 +3,6 @@ import { computed, ComputedRef, reactive } from "vue";
 import {
   Gender,
   IRegisterFormData,
-  UserType,
 } from "@/api/interfaces/auth/IRegisterFormData";
 import { useStore } from "vuex";
 import { IRegisterErrors } from "@/store/modules/auth/types";
@@ -17,7 +16,7 @@ const formData: IRegisterFormData = reactive({
   email: "",
   password: "",
   password_confirmation: "",
-  type: UserType.None,
+  // type: UserType.None,
   gender: Gender.None,
   birthDate: "",
 });
@@ -127,7 +126,7 @@ const handleRegister = () => store.dispatch("auth/REGISTER", formData);
           placeholder="********"
         />
       </div>
-      <div class="flex flex-col">
+      <!-- <div class="flex flex-col">
         <label class="block" for="user-type-sel">Type</label>
         <select
           v-model="formData.type"
@@ -145,7 +144,7 @@ const handleRegister = () => store.dispatch("auth/REGISTER", formData);
         >
           {{ error }}
         </span>
-      </div>
+      </div> -->
       <div class="flex flex-col">
         <label class="block" for="gender-sel">Gender</label>
         <select

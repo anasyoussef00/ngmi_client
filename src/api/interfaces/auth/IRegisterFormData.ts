@@ -1,8 +1,8 @@
-export enum UserType {
-  None = "",
-  R = "R",
-  A = "A",
-}
+// export enum UserType {
+//   None = "",
+//   R = "R",
+//   A = "A",
+// }
 
 export enum Gender {
   None = "",
@@ -18,7 +18,7 @@ export interface IRegisterFormData {
   email: string;
   password: string;
   password_confirmation: string;
-  type: UserType;
+  // type: UserType;
   gender: Gender;
   birthDate: string;
 }
